@@ -1,6 +1,8 @@
 package staff;
 
-public class Staff {
+import java.io.Serializable;
+
+public class Staff implements Serializable {
     private String id;
     private String fullName ;
     private String address;

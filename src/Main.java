@@ -1,14 +1,14 @@
-package programs;
 
-import creat.Menus;
-import manager.PersonalInformation;
-import staffIT.StaffIT;
+
+
+
+import staff.Staff_IT;
 
 import java.util.Scanner;
 
-public class Action {
+public class Main {
     public static void main(String[] args) {
-        PersonalInformation per = new PersonalInformation();
+        Manage manage = new Manage();
         Menus menus= new Menus();
         Scanner scanner = new Scanner(System.in);
         do {
@@ -21,20 +21,20 @@ public class Action {
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice){
                 case 1:
-                    StaffIT newStaff= menus.addStaff();
-                    per.add(newStaff);
+                    Staff_IT newStaff= menus.addStaff();
+                    manage.add(newStaff);
                     break;
                 case 2:
-                    per.checkPerInformation();
+                    manage.checkPerInformation();
                     break;
                 case 3:
-                    per.checkSS8Plus();break;
+                    manage.checkSS8Plus();break;
                 case 4:
                     System.out.println("sum salary in month is ");
-                    per.sumSalary();
+                    manage.sumSalary();
                     break;
                 case 5:
-                    per.read();
+                    manage.read();
                     break;
                 case 6:
                     System.out.print("exit");

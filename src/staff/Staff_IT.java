@@ -1,13 +1,15 @@
-package staffIT;
+package staff;
 
 import staff.Staff;
 
-public class StaffIT extends Staff implements Comparable<StaffIT> {
+import java.io.Serializable;
+
+public class Staff_IT extends Staff implements Comparable<Staff_IT> {
     private int salaryBasic;
     private int salaryBonus;
     private int salaryPunish;
 
-    public StaffIT() {
+    public Staff_IT() {
     }
 
 
@@ -66,7 +68,7 @@ public class StaffIT extends Staff implements Comparable<StaffIT> {
     }
 
     @Override
-    public int compareTo(StaffIT staffIT) {
+    public int compareTo(Staff_IT staffIT) {
 
         return this.addStyleSalary().compareTo(staffIT.addStyleSalary());
     }
